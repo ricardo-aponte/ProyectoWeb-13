@@ -1,45 +1,51 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* --- CONFIGURACIÓN BÁSICA --- */
 body {
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
     background-color: #f4f4f4;
+    
+    /* IMPORTANTE: Como el menú es fijo, empujamos el contenido 
+       hacia abajo la misma altura que el header (80px) */
+    padding-top: 80px; 
 }
 
-
+/* --- HEADER (Barra fija arriba) --- */
 header {
     background-color: white;
-    height: 120px; 
+    height: 80px;  /* Altura fija cómoda (ni muy grande, ni muy chica) */
     width: 100%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    
+    /* ESTO LO HACE FIJO: */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que siempre esté encima de todo */
+    
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombrita para que destaque */
 }
 
+/* --- CONTENEDOR (Lo que hace que se vea "compacto") --- */
 .container {
-    max-width: 90%;  
-    margin: 0 auto;
+    /* TRUCO: Usamos 1100px en vez de 90% o 100%. 
+       Esto mantiene el logo y el menú más juntos en el centro. */
+    max-width: 1100px; 
+    margin: 0 auto;    /* Centrado */
     height: 100%;
     padding: 0 20px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
+/* --- LOGO --- */
 .logo {
-    max-height: 35px; 
+    max-height: 35px; /* Tamaño controlado */
     width: auto;
-    align-self: center;
-    margin-left: 40px; 
+    /* Ya no necesitas margins raros, el flexbox se encarga */
 }
 
-
-nav {
-    height: 100%;
-}
+/* --- NAVEGACIÓN --- */
+nav { height: 100%; }
 
 nav ul {
     display: flex;
@@ -57,31 +63,31 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #2b2b2b; 
-    font-weight: 600; 
-    font-size: 18px;  
-    padding: 0 22px;  
-    display: flex;
-    align-items: center;
+    color: #444; /* Gris oscuro */
+    font-weight: 700; /* Letra gruesa se lee mejor si es pequeña */
+    font-size: 13px;  /* Letra más pequeña y elegante */
+    text-transform: uppercase; /* Mayúsculas tipo profesional */
+    
+    padding: 0 15px; /* Espacio entre palabras */
     height: 100%;
-    white-space: nowrap;
+    
+    /* Para centrar el texto verticalmente */
+    display: flex;
+    align-items: center; 
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #d4145a;
+    color: #d4145a; /* Color rosa al pasar el mouse */
 }
 
-
+/* --- BOTÓN ESPECIAL (HOME) --- */
+/* El primer elemento se ve como un botón con degradado */
 nav ul li:first-child a {
     background: linear-gradient(180deg, #9c00b8 0%, #e32929 100%);
-    
     color: white;
-    font-weight: 700; 
-    font-size: 18px; 
-    padding: 0 15px;
+    padding: 0 25px; /* Un poco más ancho para que parezca botón */
 }
-
 
 nav ul li:first-child a:hover {
     opacity: 0.9;

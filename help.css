@@ -1,0 +1,78 @@
+/* --- SECCIÓN: HOW CAN WE HELP YOU --- */
+.help-section {
+    padding: 70px 20px;
+    background-color: #f9f9f9; 
+    text-align: center;
+}
+
+.container-help {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Títulos */
+.help-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.help-subtitle {
+    font-size: 15px;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 50px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* La Cuadrícula (3 Columnas) - VERSIÓN COMPACTA */
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    
+    /* AQUÍ ESTÁ LA CLAVE DE LO "COMPACTO": */
+    max-width: 800px; /* Reduje el ancho (antes 1000px) para forzarlos a juntarse */
+    margin: 0 auto;   /* Centrado en la pantalla */
+    
+    column-gap: 20px; /* Espacio horizontal reducido entre columnas */
+    row-gap: 30px;    /* Espacio vertical reducido entre filas */
+    
+    text-align: left; 
+}
+
+/* Cada Item (Icono + Texto) */
+.help-item {
+    display: flex;
+    align-items: center;
+    
+    /* Un pequeño empujón para que visualmente se vean alineados al centro de su columna */
+    padding-left: 20px; 
+}
+
+/* El Icono Gris */
+.help-item i {
+    font-size: 20px; /* Iconos un poco más pequeños y elegantes */
+    color: #ccc; 
+    
+    margin-right: 12px; /* Más pegado al texto */
+    
+    width: 25px; 
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* El Texto */
+.help-item span {
+    font-size: 15px;
+    font-weight: 600; 
+    color: #444;
+}
+
+/* Efecto Hover */
+.help-item:hover i {
+    color: #d4145a; 
+}
