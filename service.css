@@ -1,16 +1,16 @@
-/* --- SECCIÓN DE SERVICIOS --- */
+
 .services-section {
-    padding: 80px 20px; /* Espacio arriba y abajo */
+    padding: 80px 20px; 
     background-color: white;
     text-align: center;
 }
 
 .container-services {
-    max-width: 1000px; /* Ancho máximo para que no se desparrame */
+    max-width: 1000px; 
     margin: 0 auto;
 }
 
-/* Título Principal */
+
 .section-title {
     font-size: 36px;
     font-weight: 700;
@@ -18,26 +18,26 @@
     margin-bottom: 20px;
 }
 
-/* Subtítulo gris */
+
 .section-subtitle {
     font-size: 16px;
-    color: #666; /* Gris suave */
-    font-style: italic; /* Cursiva como en la imagen */
-    margin-bottom: 60px; /* Espacio antes de los iconos */
+    color: #666;
+    font-style: italic;
+    margin-bottom: 60px; 
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Contenedor de las 3 columnas */
+
 .services-grid {
     display: flex;
-    justify-content: center; /* Centrados en la pantalla */
-    gap: 80px; /* Espacio entre cada icono */
-    flex-wrap: wrap; /* Para que baje en celulares */
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap; 
 }
 
-/* Cada Item Individual */
+
 .service-item {
     display: flex;
     flex-direction: column;
@@ -45,31 +45,25 @@
     width: 200px;
 }
 
-/* EL CÍRCULO CON DEGRADADO */
+
 .icon-circle {
     width: 90px;
     height: 90px;
-    border-radius: 50%; /* Lo hace redondo */
-    
-    /* El mismo degradado que usaste antes (Morado a Rojo) */
+    border-radius: 50%; 
     background: linear-gradient(180deg, #aa0ec6 0%, #ff5240 100%);
-    
-    /* Centrar el icono dentro del círculo */
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    margin-bottom: 25px; /* Espacio entre bola y texto */
+    margin-bottom: 25px; 
     transition: transform 0.3s ease;
 }
 
-/* El icono blanco dentro */
+
 .icon-circle i {
-    font-size: 35px; /* Tamaño del dibujo */
+    font-size: 35px; 
     color: white;
 }
 
-/* Títulos de abajo (Web App, Mobile...) */
 .service-item h3 {
     font-size: 18px;
     font-weight: 700;
@@ -77,7 +71,7 @@
     line-height: 1.4;
 }
 
-/* Efecto al pasar el mouse (Opcional) */
+
 .service-item:hover .icon-circle {
-    transform: scale(1.1); /* Crece un poquito */
+    transform: scale(1.1);
 }
